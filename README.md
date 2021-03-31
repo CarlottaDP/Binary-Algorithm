@@ -76,12 +76,17 @@ The Classification Rationale      🡲     If this score is greater than or equa
                                         - Repeat
 
 
-f(x) = 1 if w · x + b > 0     # the function of the output f (x) is is defined IF the sum 'Σ' of the features values 
-       0 otherwise              multiplied by weights value is above 0.
-                              # Otherwise adjust the a new wights by :
-w <- w + (y - f(x)) * x         old weights plus the obtained error ( given by subtractive the expected output from the 
-                                actual output ).
+                                                                  f(x) = 1 if w · x + b > 0     
+                                                                         0 otherwise              
 
+                                                                  w <- w + (y - f(x)) * x        
+                                    
+
+                               The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
+
+                               The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
+                               
+                               
  ```python
 learned = False                                       # Pseudocode
 while(learned != True and current_epoch < limit):
