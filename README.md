@@ -1,45 +1,64 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Binary Classification: The Perceptron Algorithm 
+This Folder provides with the implementation of the Perceptron algorithm for the binary classification of a data set along with the  Perceptron pseudocode.
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+In this Repository:
 
-## Gitpod Reminders
+➊  README            🢂 you are reading this file
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+➋  Pseudocode       🢂 a straighfoward and 'text-based" algorithmich design for the Perceptron model
 
-`python3 -m http.server`
+➌  TrainingData     🢂 contains the data-set used in the training-stage of the algorithm 
 
-A blue button should appear to click: *Make Public*,
+➍  Testing Data      🢂 contains the data-set used in the training-stage of the algorithm 
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+➎  Perceptron 🢂 this is the Python Script for the implementation of the Binary Perceptron: 
 
-A blue button should appear to click: *Make Public*,
+                                 Training phase :    ...
+       FIND      🢂                      
+                                 Testing  phase  :    ...
+                                 
+# Binary Classification and the Perceptron Model                                 
+                                 
+The Perceptron Model is implemented to define the optimal hyperplane which divides the input dimension into two half-dimensions and it is therefore used in binary classification problems.
 
-Another blue button should appear to click: *Open Browser*.
+This artificial neuron's structure is proposed below:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![a](https://user-images.githubusercontent.com/73316290/113158889-14367500-9234-11eb-8f84-568e4e383a93.png)
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Such algorithmich design is the construction of a mathematical function that has been conceived to define a perceptron model, biologically inspired.
+At the most basic level, the nodes as per in the diagram above represents the brain neurons that use a trasnfer function to pass information to successor leyers.
+Specificallu, the perceptron algorithm is a classification model implemented in ''Machine Supervised Learning'' and it definde by a set of Scores ( these are the W weights)
+one for every object feature ( these are the X inputs)  and a threshold ( this is a fix boundary value).
+                                                            
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The Perceptron mechanism          🡲     The Algorithm computes the SUM 'Σ'  of the weights (W) multiplied by its corresponding feature score (x) 
+                                         producing a Score ( activation score) 
+                                         
+The Classification Rationale      🡲     If this score is greater than or equal to the fix threshold value the algorithm returns 'TRUE'  or '1' 
+                                         If this score is greater than or equal to the fix threshold value the algorithm returns 'FALSE' or '0' 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ # The Algorithm Dinamics 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+⚪ The model will repeat an epoch until the perceptron has reached the number of epochs available or it has learned the task.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+⚪ Within each epoch the algorithm is programmed to iterate through the whole data set. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+⚪ within each iteration the algorithm looks for the *value-error* between the value given by its activation function and the desired output.
 
---------
+⚪ At such point, the if this value-error is different from *0* If error is different from zero then the Algorithm will adjust its weight again.                                           
 
-Happy coding!
+
+                                         The Classification process
+
+
+                                        1- Initialise the weights 
+                                        2- Multiply the weights by the imput, Sum this computation.
+                                        3- Compare the activation score against the threshold 
+                                        4- Update the weights
+                                        5- Repeat
+
