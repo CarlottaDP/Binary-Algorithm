@@ -53,7 +53,7 @@ The Classification Rationale      🡲     If this score is greater than or equa
 ⚪ At such point, the if this value-error is different from *0* If error is different from zero then the Algorithm will adjust its weight again.                                           
 
 
-                                         The Classification process
+                                    # The Classification process
 
 
                                         1- Initialise the weights 
@@ -62,3 +62,34 @@ The Classification Rationale      🡲     If this score is greater than or equa
                                         4- Update the weights
                                         5- Repeat
 
+                                    # The pseudocode
+
+*Designing a Learning rule*
+
+- Use label data 🡲 predict output
+
+- Compare the predicted output with actual output ( firing status = active vs not active)
+
+- Adjust bias and weights according to the outoput status 
+
+- Repeat
+
+
+f(x) = 1 if w · x + b > 0     # the function of the output f (x) is is defined IF the sum 'Σ' of the features values 
+       0 otherwise              multiplied by weights value is above 0.
+                              # Otherwise adjust the a new wights by :
+w <- w + (y - f(x)) * x         old weights plus the obtained error ( given by subtractive the expected output from the 
+                                actual output ).
+
+ ```python
+learned = False                                       # Pseudocode
+while(learned != True and current_epoch < limit):
+    for data in data_set:
+        error = data['desired'] - activation(data['coord'])
+        if(error != 0):
+            adjust_weights()
+        else:
+            learned = True
+    limit += 1
+```
+---------------------------------------------------------------------------------------------------------
