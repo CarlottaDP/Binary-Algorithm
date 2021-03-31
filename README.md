@@ -82,9 +82,9 @@ The Classification Rationale      🡲     If this score is greater than or equa
                                                             w <- w + (y - f(x)) * x        
 
 
-                         The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
+             The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
 
-                         The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
+             The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
                                
                                
  ```python
