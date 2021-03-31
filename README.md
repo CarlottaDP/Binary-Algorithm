@@ -67,24 +67,24 @@ The Classification Rationale      🡲     If this score is greater than or equa
        
 # The pseudocode : Designing a Learning rule
 
-                                        - Use label data 🡲 predict output
+                                  - Use label data 🡲 predict output
 
-                                        - Compare the predicted output with actual output ( firing status = active vs not active)
+                                  - Compare the predicted output with actual output ( firing status = active vs not active)
 
-                                        - Adjust bias and weights according to the outoput status 
+                                  - Adjust bias and weights according to the outoput status 
 
-                                        - Repeat
+                                  - Repeat
 
 
-                                                                  f(x) = 1 if w · x + b > 0     
-                                                                         0 otherwise              
+                                                            f(x) = 1 if w · x + b > 0     
+                                                                   0 otherwise              
 
-                                                                  w <- w + (y - f(x)) * x        
-                                    
+                                                            w <- w + (y - f(x)) * x        
 
-                               The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
 
-                               The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
+                         The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
+
+                         The function of the output f (x) is is defined IF the sum 'Σ' of the features values multiplied by weights value is above 0.
                                
                                
  ```python
